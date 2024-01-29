@@ -16,7 +16,7 @@ def fetch_spacex_launches():
     else:
         return []
     
-def categorise_launches(launches):
+def categorise_launches(launches): # Only 3 status' of launch
     successful = list(filter(lambda x: x["success"] and not x["upcoming"], launches))
     failed = list(filter(lambda x: not x["success"] and not x["upcoming"], launches))
     upcoming = list(filter(lambda x: x["upcoming"], launches))

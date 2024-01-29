@@ -26,19 +26,19 @@
         </li>
     </ul>
 
-    <div class="tab-content">
+    <div class="tab-content"> <!-- Reversed the list for most recent first! -->
         <div id="successful" class="container tab-pane active">
-            {% for launch in launches.successful|reverse %} <!-- Reversed the list for most recent first! -->
+            {% for launch in launches.successful|reverse %} 
             {{render_launch(launch)}} 
             {% endfor %}
         </div>
         <div id="failed" class="container tab-pane fade">
-            {% for launch in launches.failed|reverse %} <!-- Reversed the list for most recent first! -->
+            {% for launch in launches.failed|reverse %} 
             {{render_launch(launch)}} 
             {% endfor %}
         </div>
         <div id="upcoming" class="container tab-pane fade">
-            {% for launch in launches.upcoming|reverse %} <!-- Reversed the list for most recent first! -->
+            {% for launch in launches.upcoming|reverse %}
             {{render_launch(launch)}} 
             {% endfor %}
         </div>
