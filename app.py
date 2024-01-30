@@ -32,7 +32,9 @@ def date_only_filter(s):
     date_object = datetime.strptime(s, "%Y-%m-%dT%H:%M:%S.%fZ")
     return date_object.date()
 
+
 launches = categorise_launches(fetch_spacex_launches())
+
 
 if __name__ == "__main__":
     app.run(debug=True)
